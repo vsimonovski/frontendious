@@ -1,0 +1,4 @@
+*.map
+*.lock
+node_modules/
+dist/
