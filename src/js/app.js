@@ -1,1 +1,1 @@
-import { index, normalize } from './css_modules';
+import './css_modules';
