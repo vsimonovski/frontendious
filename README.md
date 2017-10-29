@@ -15,7 +15,7 @@ Webpack project setup, suitable for both websites/web apps.
 
 If you want to use `background: url()` inside `*.scss` file, always create path relative to scss folder, even if the current .scss file is, for example, inside `modules/` folder.
 
-```css
+```scss
 /* current location: scss/modules/_somefile.scss */
 background: url('../assets/mypicture.png'); 👍 
 background: url('../../assets/mypicture.png'); 👎 
