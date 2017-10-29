@@ -6,5 +6,21 @@ const cleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
     devtool: 'source-map',
-    plugins: [new MinifyPlugin(), new cleanWebpackPlugin(['dist'])]
+    plugins: [new MinifyPlugin(), new cleanWebpackPlugin(['dist'])],
+    module: {
+        rules: [
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 });
