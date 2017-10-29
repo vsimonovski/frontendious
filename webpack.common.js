@@ -12,8 +12,7 @@ module.exports = {
     entry: path.join(paths.JS, 'app.js'),
     output: {
         path: paths.DIST,
-        filename: 'app.bundle.js',
-        publicPath: '/'
+        filename: 'app.bundle.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -47,10 +46,6 @@ module.exports = {
                         'sass-loader'
                     ]
                 })
-            },
-            {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: ['file-loader?name=images/[name].[ext]']
             }
         ]
     },
