@@ -1,5 +1,6 @@
 *.map
 *.lock
+*-lock.json
 node_modules/
 dist/
 .DS_STORE

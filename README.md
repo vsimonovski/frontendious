@@ -23,6 +23,59 @@ background: url('../../assets/mypicture.png'); 👎
 ---
 css-loader will [ignore path starting with /](https://github.com/webpack-contrib/css-loader#root), to prevent that behaviour add option "root: '.'"
 
+## Add support for React
+
+```bash
+yarn install babel-preset-react react react-dom react-router-dom
+# or
+npm install babel-preset-react react react-dom react-router-dom
+```
+
+```html
+<!-- index.html -->
+<!-- ... -->
+<div id="app"></div>
+<!-- ... -->
+```
+
+```javascript
+// app.js
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import './css_modules';
+
+class Home extends Component {
+    render() {
+        return <div>hello</div>;
+    }
+}
+
+render(<Home />, document.getElementById('app'));
+```
+
+```javascript
+// webpack.common.js
+...
+module: {
+    rules: [
+        {
+            test: /\.(js|jsx)$/
+        }
+    ]
+},
+resolve: {
+    extensions: ['.js', '.jsx']
+}
+...
+```
+
+```javascript
+// .babelrc
+{
+    "presets": ["env", "react"]
+}
+```
+
 ## Build Setup
 
 ```bash
