@@ -26,7 +26,7 @@ css-loader will [ignore path starting with /](https://github.com/webpack-contrib
 ## Add support for React
 
 ```bash
-yarn install babel-preset-react react react-dom react-router-dom
+yarn add babel-preset-react react react-dom react-router-dom
 # or
 npm install babel-preset-react react react-dom react-router-dom
 ```
