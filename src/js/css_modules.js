@@ -1,4 +1,4 @@
 export default {
-    index: require('../scss/index.scss'),
-    normalize: require('normalize.css')
+    normalize: require('normalize.css'),
+    index: require('../scss/index.scss')
 };
