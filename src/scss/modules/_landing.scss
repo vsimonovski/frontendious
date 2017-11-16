@@ -7,15 +7,28 @@
     }
 }
 
+/************************************************************ 
+To align logo (or anything else with flex) you can use 
+align-items: center, justify-content: center 
+inside .content, this will work but will cause 'bug'
+with content 'jumping' out of flex parrent when content
+have greater height then flex parrent.
+(You can see this behaviour when browser window have minimal height)
+
+To prevent this use margin:auto on child element instead of
+align/justify properties on parrent element.
+
+more details: https://stackoverflow.com/q/33454533
+*************************************************************/
+
 .content {
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 
     &__logo {
         width: 250px;
         height: 250px;
+        margin: auto;
         transform: rotate(7deg);
         animation-name: spin;
         animation-duration: 20s;
