@@ -6,7 +6,7 @@ Webpack project setup, suitable for both websites/web apps.
 ## What's in the 📦 ?
 
 * 🔥 webpack, webpack-dev-server (config splitted into webpack.dev and webpack.prod)
-* 💪 babel (env presset)
+* 💪 babel (env presset, object-rest-spread plugin)
 * 🦄 scss support, postcss autoprefix, normalize.css included
 * 🖼️ image support (png|jpg|gif|svg)
 * 💅 [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) configured 
@@ -26,9 +26,13 @@ css-loader will [ignore path starting with /](https://github.com/webpack-contrib
 ## Add support for React
 
 ```bash
-yarn add babel-preset-react react react-dom react-router dom
+# transform-class-properties is optional. 
+# With this plugin enabled, we can define our Prop Types and our Default Props now as static class properties.
+
+yarn add babel-preset-react react react-dom react-router dom babel-plugin-transform-class-properties
 # or
-npm install babel-preset-react react react-dom react-router-dom
+npm install babel-preset-react react react-dom react-router-dom babel-plugin-transform-class-properties
+
 ```
 
 ```html
@@ -72,7 +76,8 @@ resolve: {
 ```javascript
 // .babelrc
 {
-    "presets": ["env", "react"]
+    "presets": ["env", "react"],
+    "plugins": ["transform-object-rest-spread", "transform-class-properties"]
 }
 ```
 
