@@ -83,7 +83,7 @@ resolve: {
 
 ## Build Setup
 
-Previously I've used and included yarn as package manager mainly for it's caching performance. 
+Previously I've used and included yarn as package manager mainly for its caching performance. 
 
 I've removed it from this README because I've had a problem with runing build command, it throws error regarding webpack source map option, when I install libraries with npm install there is no error thrown, but I had to set version of `webpack-sources` library. [More details on this github issue](https://github.com/webpack/webpack/issues/5931)
 
