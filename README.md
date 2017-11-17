@@ -26,8 +26,6 @@ css-loader will [ignore path starting with /](https://github.com/webpack-contrib
 ## Add support for React
 
 ```bash
-yarn add babel-preset-react react react-dom react-router-dom
-# or
 npm install babel-preset-react react react-dom react-router-dom
 ```
 
@@ -78,13 +76,20 @@ resolve: {
 
 ## Build Setup
 
+Previously I've used and included yarn as package manager mainly for it's caching performance. 
+
+I've removed it from this README because I've had a problem with runing build command, it throws error regarding webpack source map option, when I install libraries with npm install there is no error thrown, but I had to set version of `webpack-sources` library. [More details on this github issue](https://github.com/webpack/webpack/issues/5931)
+
+I don't know if this is library or tool(yarn) issue but I'm sticking with npm for now.
+
 ```bash
 # install dependencies
-yarn install / npm install
+npm install
 
 # serve with hot reload at localhost:8080
-yarn dev / npm run dev
+npm run dev
 
 # build for production @dist/ folder
-yarn build / npm run build
+npm run build
+
 ```
