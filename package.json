@@ -36,7 +36,7 @@
         "webpack-dev-server": "^2.9.3",
         "webpack-merge": "^4.1.0"
     },
-    "devDependencies": {
+    "resolutions": {
         "webpack-sources": "1.0.1"
     }
 }
