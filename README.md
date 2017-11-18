@@ -1,7 +1,8 @@
-webpack-starter 
+⚡ frontendious ⚡
 ============================== 
-[ 🚧 UNDER CONSTRUCTION]
-Webpack project setup, suitable for both websites/web apps.
+[🚧 UNDER CONSTRUCTION]
+
+Boilerplate for starting modern web[apps|sites]. Powered by webpack and npm scripts.
 
 ## What's in the 📦 ?
 
@@ -19,10 +20,10 @@ server/
 |-- package.json # server dependencies
 |-- yarn.lock # lock file for server libs
 src/
-|--assets/ # place images here
-|--js/ # place javascript here
-|--scss/ # place scss here
-|--index.html # root index.html page
+|-- assets/ # place images here
+|-- js/ # place javascript here
+|-- scss/ # place scss here
+|-- index.html # root index.html page
 .babelrc # babel config
 .gitignore 
 package.json # client dependencies
@@ -109,13 +110,13 @@ resolve: {
 
 ## Build Setup
 
-Previously I've used and included yarn as package manager mainly for its caching performance. 
+~~Previously I've used and included yarn as package manager mainly for its caching performance.~~
 
-I've removed it from this README because I've had a problem with runing build command, it throws error regarding webpack source map option, when I install libraries with npm install there is no error thrown, but I had to set version of `webpack-sources` library. [More details on this github issue](https://github.com/webpack/webpack/issues/5931)
+~~I've removed it from this README because I've had a problem with runing build command, it throws error regarding webpack source map option, when I install libraries with npm install there is no error thrown, but I had to set version of `webpack-sources` library. [More details on this github issue](https://github.com/webpack/webpack/issues/5931)~~
 
 ~~I don't know if this is library or tool(yarn) issue but I'm sticking with npm for now.~~
 
-Issue is gone when webpack-sources is placed into resolutions block inside `package.json`, yarn is still safe to use 😅. [More details](https://github.com/webpack/webpack/issues/5931#issuecomment-345315365)
+Issue is gone when webpack-sources is placed into resolutions block inside `package.json`, yarn is still safe to use 😅. [More details](https://github.com/webpack/webpack/issues/5931#issuecomment-343021923)
 
 ```bash
 # install server-side depenedcies
