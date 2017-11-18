@@ -13,5 +13,13 @@ module.exports = merge(common, {
                 use: ['file-loader?name=images/[name].[ext]']
             }
         ]
+    },
+    devServer: {
+        proxy: {
+            '/api/**': {
+                target: 'http://localhost:3001'
+            }
+        },
+        port: '3000'
     }
 });

@@ -12,10 +12,13 @@
     },
     "scripts": {
         "build": "NODE_ENV=prod webpack --config webpack.prod.js",
-        "dev": "NODE_ENV=dev webpack-dev-server --open --config webpack.dev.js"
+        "dev": "NODE_ENV=dev webpack-dev-server --open --config webpack.dev.js",
+        "add-react":
+            "yarn add babel-preset-react react react-dom react-router dom babel-plugin-transform-class-properties"
     },
     "dependencies": {
         "autoprefixer": "^7.1.6",
+        "axios": "^0.17.1",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
         "babel-minify-webpack-plugin": "^0.2.0",
