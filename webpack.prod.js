@@ -1,7 +1,7 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
@@ -9,7 +9,7 @@ module.exports = merge(common, {
     output: {
         publicPath: './'
     },
-    plugins: [new MinifyPlugin(), new cleanWebpackPlugin(['dist'])],
+    plugins: [new UglifyJSPlugin(), new cleanWebpackPlugin(['dist'])],
     module: {
         rules: [
             {
